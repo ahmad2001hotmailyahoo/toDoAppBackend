@@ -2,6 +2,9 @@ const { addToList, getToDoList, deleteToDoList, updateListStatus, getToDoListByI
 const express = require('express')
 const router = express.Router();
 
+router.get('',(req, res)=>{
+    res.status(200).json({msg: 'deployment sucessfully'})
+})
 router.post('/ToDoList',addToList)
 router.get('/ToDoList',getToDoList)
 router.delete('/ToDoList/:id',deleteToDoList)
